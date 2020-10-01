@@ -8,6 +8,9 @@ COMMON_PATH := device/xiaomi/sm7125-common
 
 BUILD_BROKEN_DUP_RULES := true
 
+# APEX image
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -90,7 +93,7 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8
 BOARD_KERNEL_CMDLINE += earlycon=msm_geni_serial,0xa88000
-BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += loop.max_part=16
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += msm_rtb.enabled=1
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
@@ -215,3 +218,4 @@ BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Inherit proprietary blobs
 -include vendor/xiaomi/sm6250-common/BoardConfigVendor.mk
+
