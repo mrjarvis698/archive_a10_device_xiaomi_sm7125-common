@@ -13,6 +13,10 @@ $(call inherit-product-if-exists, vendor/xiaomi/sm7125-common/sm7125-common-vend
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Apex
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.apex.updatable=true
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
@@ -26,6 +30,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # APN
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 
 # AuthSecret
 PRODUCT_PACKAGES += \
