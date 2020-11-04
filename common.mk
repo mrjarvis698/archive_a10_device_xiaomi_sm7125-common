@@ -196,6 +196,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-xtended/packages/apps/Snap \
     $(LOCAL_PATH)/overlay-system
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.qcom.early_boot.sh
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
