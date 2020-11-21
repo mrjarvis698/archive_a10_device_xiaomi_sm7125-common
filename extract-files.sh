@@ -56,6 +56,18 @@ function blob_fixup() {
         patchelf --remove-needed "libmegface.so" "${2}"
         patchelf --add-needed "libshim_megvii.so" "${2}"
         ;;
+
+    lib64/libwfdnative.so)
+        patchelf --add-needed "libshim_wfdservice.so" "${2}"
+        ;;
+    
+    lib/libwfdcommonutils.so)
+        patchelf --add-needed "libshim_wfdservice.so" "${2}"
+        ;;
+    
+    lib/libwfdmmsrc.so)
+        patchelf --add-needed "libshim_wfdservice.so" "${2}"
+        ;;
     esac
 }
 
