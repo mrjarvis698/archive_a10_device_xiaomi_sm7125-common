@@ -200,6 +200,10 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+#Recorder
+PRODUCT_PACKAGES += \
+    Kimci
+
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
