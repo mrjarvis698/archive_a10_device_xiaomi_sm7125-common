@@ -55,8 +55,8 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+#PRODUCT_BOOT_JARS += \
+#    qcom.fmradio
 
 # AVB
 PRODUCT_PACKAGES += \
