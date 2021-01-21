@@ -215,7 +215,8 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt Apk
 PRODUCT_PACKAGES += \
-    com.google.android.modulemetadata
+    com.google.android.modulemetadata \
+    org.lineageos.lockclock
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
