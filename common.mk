@@ -31,11 +31,6 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/apns-conf.xml:system/etc/apns-conf.xml
 
-
-# AuthSecret
-PRODUCT_PACKAGES += \
-    android.hardware.authsecret@1.0-service
-
 # Audio
 PRODUCT_PACKAGES += \
     libvolumelistener
@@ -94,7 +89,9 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    disable_configstore
+    disable_configstore \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -184,7 +181,7 @@ PRODUCT_COPY_FILES += \
 # Network
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
-
+  
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -221,7 +218,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.google.android.modulemetadata \
     org.lineageos.lockclock
-
+    
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
