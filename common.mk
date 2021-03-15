@@ -89,7 +89,9 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    disable_configstore
+    disable_configstore \
+	vendor.display.config@2.0 \
+	vendor.display.config@2.0.vendor
 
 # Doze
 PRODUCT_PACKAGES += \
